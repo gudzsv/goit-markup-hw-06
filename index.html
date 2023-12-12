@@ -19,6 +19,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/script.js" defer></script>
   </head>
   <body>
     <!-- Header Container -->
@@ -29,9 +30,13 @@
           >Web<span class="logo-dark">Studio</span>
         </a>
         <!-- is-open to open mobile menue-->
-        <div class="menu-wrapper is-open">
+        <div class="menu-wrapper">
           <!-- Burger menue -->
-          <button class="menu-close-btn" type="button">
+          <button
+            class="menu-close-btn"
+            type="button"
+            aria-label="Close button"
+          >
             <svg
               class="menu-close-btn-icon"
               width="24"
@@ -137,7 +142,9 @@
       <section class="order-section">
         <div class="order-section-wrapper">
           <h1 class="order-title">Effective Solutions for Your Business</h1>
-          <button class="order-button" type="button">Order Service</button>
+          <button class="order-button" type="button" data-open-modal>
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -633,29 +640,26 @@
       </div>
     </footer>
     <!-- Modal Order -->
-    <!-- <div class="order-modal-container is-open">
-      <div class="modal-wrapper">  -->
-    <!-- Form Close X Button -->
-    <!-- <button class="order-modal-close-btn" type="button">
+    <!-- order-modal-container -->
+    <div class="backdrop" data-backdrop>
+      <!-- modal-wrapper -->
+      <div class="modal">
+        <!-- Form Close X Button -->
+        <button class="order-modal-close-btn" type="button" data-close-modal>
           <svg class="order-modal-close-x-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close-black"></use>
           </svg>
         </button>
 
-        <p class="order-modal-text">
+        <p class="order-modal-title">
           Leave your contacts and we will call you back
         </p>
 
-        <form
-          class="order-modal-form"
-          action="/index.html"
-          autocomplete="off"
-          name="order-form"
-        > -->
-    <!-- Form Inputs -->
-    <!-- <div class="order-modal-inputs-wrapper">
+        <form class="order-modal-form" autocomplete="off" name="order-form">
+          <!-- Form Inputs -->
+          <div class="order-modal-inputs-wrapper">
             <label class="order-modal-form-label" for="user-name"> Name</label>
-            <div class="order-modal-input-icon-box">
+            <div class="order-modal-input-box">
               <input
                 id="user-name"
                 class="order-modal-form-input"
@@ -671,7 +675,7 @@
             <label class="order-modal-form-label" for="user-phone">
               Phone</label
             >
-            <div class="order-modal-input-icon-box">
+            <div class="order-modal-input-box">
               <input
                 id="user-phone"
                 class="order-modal-form-input"
@@ -687,7 +691,7 @@
             <label class="order-modal-form-label" for="user-emeil">
               Email
             </label>
-            <div class="order-modal-input-icon-box">
+            <div class="order-modal-input-box">
               <input
                 id="user-emeil"
                 class="order-modal-form-input"
@@ -698,10 +702,10 @@
                 <use href="./images/icons.svg#icon-email-black"></use>
               </svg>
             </div>
-          </div> -->
+          </div>
 
-    <!-- Fotm Text Area -->
-    <!-- <div class="order-modal-form-textarea-wrapper">
+          <!-- Fotm Text Area -->
+          <div class="order-modal-form-textarea-wrapper">
             <label class="order-modal-form-label" for="user-comment">
               Comment</label
             >
@@ -712,10 +716,10 @@
               rows="8"
               placeholder="Text input"
             ></textarea>
-          </div> -->
+          </div>
 
-    <!-- Form Check-box  -->
-    <!-- <div class="order-modal-ckeckbox-wrapper">
+          <!-- Form Check-box  -->
+          <div class="order-modal-ckeckbox-wrapper">
             <input
               id="user-privacy"
               class="order-modal-check-box-input visually-hidden"
@@ -724,24 +728,27 @@
               name="user-privacy"
             />
             <label class="order-modal-check-box-label" for="user-privacy">
+              <!-- <span> -->
+              <svg class="order-modal-icon-check-svg" width="16" height="16">
+                <use href="./images/icons.svg#icon-click"></use>
+              </svg>
+              <!-- </span> -->
+
               <span class="order-modal-checkbox-icon-wrapper">
-                <svg class="order-modal-icon-check-svg" width="10" height="8">
-                  <use href="./images/icons.svg#icon-check-white"></use>
-                </svg>
+                I accept the terms and conditions of the
+                <a
+                  class="order-modal-order-policy-link"
+                  href=""
+                  title="Privacy Policy"
+                  >Privacy Policy</a
+                >
               </span>
-              I accept the terms and conditions of the
-              <a
-                class="order-modal-order-policy-link"
-                href=""
-                title="Privacy Policy"
-                >Privacy Policy</a
-              >
             </label>
-          </div> -->
-    <!-- Form Submit Button -->
-    <!-- <button class="order-modal-btn-submit" type="submit">Send</button>
+          </div>
+          <!-- Form Submit Button -->
+          <button class="order-modal-btn-submit" type="submit">Send</button>
         </form>
       </div>
-    </div> -->
+    </div>
   </body>
 </html>

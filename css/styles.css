@@ -683,7 +683,6 @@ address {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* align-items: center; */
     gap: 64px 24px;
   }
 
@@ -1054,7 +1053,6 @@ address {
 
 .modal {
   position: absolute;
-  /* top: 60px; */
   top: 50%;
   left: 50%;
   min-width: 288px;

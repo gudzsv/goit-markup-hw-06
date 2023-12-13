@@ -140,7 +140,6 @@ address {
 
 /* #region HEADER */
 .header {
-  position: relative;
   border-bottom: 1px solid var(--CORNFLOWER);
   background: var(--WHITE);
   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
@@ -179,7 +178,6 @@ address {
 /* Navigation Menue */
 .menu.is-open {
   opacity: 1;
-  /* pointer-events: auto; */
   transform: translateY(0);
 }
 

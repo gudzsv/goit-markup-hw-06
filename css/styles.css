@@ -556,7 +556,6 @@ address {
 
 @media screen and (min-width: 1158px) {
   .strategy-list {
-    /* justify-content: space-between; */
   }
   .strategy-list-item {
     flex-basis: calc((100% - 72px) / 4);
@@ -1059,11 +1058,9 @@ address {
   top: 50%;
   left: 50%;
   min-width: 288px;
-  min-height: 623px;
   padding: 24px 16px;
   border-radius: 4px;
   background-color: var(--DARIY);
-  /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.06); */
   opacity: 0;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -1140,7 +1137,6 @@ address {
   position: absolute;
   left: 16px;
   top: 15%;
-  /* transform: translateY(-50%); */
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1178,9 +1174,44 @@ address {
 
 .order-modal-check-box-label {
   display: flex;
+  color: var(--LIGHT-SLATE);
+  font-size: 12px;
+  line-height: 1.7;
+  letter-spacing: 0.04em;
 }
 .order-modal-icon-check-svg {
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.order-modal-checkbox-icon-wrapper {
+  margin: auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
   margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.order-modal-check-box-input:not(:checked)
+  + .order-modal-check-box-label
+  .order-modal-icon-check-svg {
+  opacity: 0;
+}
+
+.order-modal-check-box-input:checked
+  + .order-modal-check-box-label
+  .order-modal-checkbox-icon-wrapper {
+  border: none;
+}
+
+.order-modal-order-policy-link {
+  color: var(--IRIS);
+  font-size: 12px;
+  line-height: 1.33;
+  text-decoration-line: underline;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /** endcheck **/

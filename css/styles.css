@@ -862,12 +862,12 @@ address {
 .footer-social-item {
   background-color: var(--IRIS);
   border-radius: 50%;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-item:hover,
 .footer-social-item:focus {
-  background-color: var(--OCEAN);
+  background-color: var(--GREEN);
 }
 
 .footer-social-icon {

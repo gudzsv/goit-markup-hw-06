@@ -142,7 +142,7 @@ address {
 
 /* #region HEADER */
 .header {
-  /* border-bottom: 1px solid var(--CORNFLOWER); */
+  border-bottom: 1px solid var(--CORNFLOWER);
   background: var(--WHITE);
   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
@@ -383,7 +383,7 @@ address {
     content: '';
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -1px;
     width: 100%;
     height: 4px;
     opacity: 0;
